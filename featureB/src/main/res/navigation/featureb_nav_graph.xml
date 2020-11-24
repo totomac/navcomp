@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/featureb_nav_graph"
+    app:startDestination="@id/fragmentBOne">
+
+
+    <fragment
+        android:id="@+id/fragmentBOne"
+        android:name="com.example.featureb.FragmentBOne"
+        tools:layout="@layout/featureb_screen_one_layout"
+        android:label="FragmentBOne" >
+        <action
+            android:id="@+id/action_fragmentBOne_to_fragmentBTwo"
+            app:destination="@id/fragmentBTwo" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentBTwo"
+        android:name="com.example.featureb.FragmentBTwo"
+        android:label="FragmentBTwo"
+        tools:layout="@layout/featureb_screen_two_layout">
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="app://awesome/featurebscreentwo" />
+    </fragment>
+</navigation>

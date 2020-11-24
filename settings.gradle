@@ -1,0 +1,4 @@
+include ':featureB'
+include ':featureA'
+include ':app'
+rootProject.name = "My Application"
